@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="test.CreatingPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/CreatingPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="141" x="-40" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="test.PizzaTester" project="pizzeria" file="/pizzeria/src/test/PizzaTester.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="215" x="1573" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="wrapper.ProxyPizzeria" project="pizzeria" 
+    file="/pizzeria/src/wrapper/ProxyPizzeria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="270" x="3859" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="wrapper.UpdatePizzeria" project="pizzeria" 
+    file="/pizzeria/src/wrapper/UpdatePizzeria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="270" x="953" y="1079"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="exceptions.PriceMissingException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/PriceMissingException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="179" x="4219" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="exceptions.ExceptionFactory" project="pizzeria" 
+    file="/pizzeria/src/exceptions/ExceptionFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="267" x="205" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="test.DeleteChoiceTest" project="pizzeria" 
+    file="/pizzeria/src/test/DeleteChoiceTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="123" x="141" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="test.UpdateChoiceTest" project="pizzeria" 
+    file="/pizzeria/src/test/UpdateChoiceTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="127" x="325" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="test.DuplicatingOptionSetPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/DuplicatingOptionSetPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="212" x="492" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="test.AddingOptionSetPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/AddingOptionSetPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="744" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="test.PizzeriaTestDriver" project="pizzeria" 
+    file="/pizzeria/src/test/PizzeriaTestDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="127" x="758" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="test.UpdatingOptionPricePizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/UpdatingOptionPricePizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="210" x="993" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="exceptions.OptionSetExistException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/OptionSetExistException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="189" x="4438" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="model.OptionSet.Option" project="pizzeria" 
+    file="/pizzeria/src/model/OptionSet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="128" x="3676" y="1398"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="test.AddingChoiceTest" project="pizzeria" 
+    file="/pizzeria/src/test/AddingChoiceTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="126" x="1243" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="test.AddingOptionTest" project="pizzeria" 
+    file="/pizzeria/src/test/AddingOptionTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="124" x="1409" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="exceptions.OptionExistsException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/OptionExistsException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="179" x="4667" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="18" language="java" name="wrapper.CreatePizzeria" project="pizzeria" 
+    file="/pizzeria/src/wrapper/CreatePizzeria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="244" x="285" y="1079"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="model.PizzaConfig" project="pizzeria" file="/pizzeria/src/model/PizzaConfig.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="585" width="246" x="3933" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="test.CreateConfigTest" project="pizzeria" 
+    file="/pizzeria/src/test/CreateConfigTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="122" x="1573" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="test.AddingOptionPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/AddingOptionPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="169" x="1735" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="exceptions.PizzeriaAlreadyExistsException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/PizzeriaAlreadyExistsException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="224" x="4886" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="test.UpdateOptionTest" project="pizzeria" 
+    file="/pizzeria/src/test/UpdateOptionTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="125" x="1944" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="24" language="java" name="model.Size" project="pizzeria" file="/pizzeria/src/model/Size.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="136" x="3933" y="1079"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="25" language="java" name="model.DeliveryMode" project="pizzeria" 
+    file="/pizzeria/src/model/DeliveryMode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="180" x="4109" y="1079"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="26" language="java" name="test.UpdatingBasePricePizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/UpdatingBasePricePizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="202" x="2109" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="test.DuplicatingPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/DuplicatingPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="156" x="2351" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="test.FindChoiceTest" project="pizzeria" 
+    file="/pizzeria/src/test/FindChoiceTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="116" x="2547" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="exceptions.NameMissingException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/NameMissingException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="182" x="5150" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="wrapper.PizzaConfigAPI" project="pizzeria" 
+    file="/pizzeria/src/wrapper/PizzaConfigAPI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="109" x="3784" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="test.TestDriver" project="pizzeria" file="/pizzeria/src/test/TestDriver.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="1172" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="exceptions.CustomException" project="pizzeria" 
+    file="/pizzeria/src/exceptions/CustomException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="181" x="4667" y="117"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="test.CreateNameMissingPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/CreateNameMissingPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="208" x="2703" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="test.DuplicatingOptionPizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/DuplicatingOptionPizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="193" x="2951" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="model.OptionSet" project="pizzeria" file="/pizzeria/src/model/OptionSet.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="217" x="3676" y="1079"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="test.DeleteOptionTest" project="pizzeria" 
+    file="/pizzeria/src/test/DeleteOptionTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="121" x="3184" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="test.FindOptionSetTest" project="pizzeria" 
+    file="/pizzeria/src/test/FindOptionSetTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="127" x="3345" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="test.UpdatingOptionSetNamePizzeriaTest" project="pizzeria" 
+    file="/pizzeria/src/test/UpdatingOptionSetNamePizzeriaTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="232" x="3512" y="454"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <generalization id="41">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="43">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="44" name="config"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <nesting id="47">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="14"/>  
+  </nesting>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="49">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="50" name="configs"/>      
+      <multiplicity id="51" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="53" name="choices"/>      
+      <multiplicity id="54" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="58">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="59">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="60">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="61" name="size"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="63">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="64">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="66">    
+    <bendpoint x="962" y="454"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="67" name="updateApi"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="70">    
+    <bendpoint x="294" y="454"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="71" name="createApi"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="73">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <association id="74">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="75" name="optionSets"/>      
+      <multiplicity id="76" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="78">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="80">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="81">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="82" name="deliveryMode"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="84">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="85">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="32"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="90">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="91" name="api"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="93">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

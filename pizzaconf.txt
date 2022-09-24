@@ -1,0 +1,6 @@
+$Pizza config,5000
+*Meat Choice
+*Veg Choice
+#Meat Choice:Pepperoni, 4000
+#Veg Choice:Tomato, 4000
+#Meat Choice:Beef, 4000
