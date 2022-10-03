@@ -9,22 +9,28 @@
 package exceptions;
 
 import java.util.Date;
+import java.util.Random;
 
 import model.PizzaConfig;
 
 public class PizzeriaAlreadyExistsException extends CustomException
 {
-    public PizzeriaAlreadyExistsException(String name,boolean debug)
-    {
-        super(name);
-        this.setDebugAllowed(debug);
-    }
+   
     
+    public PizzeriaAlreadyExistsException(PizzaConfig c,boolean debug)
+    {
+        super(c);
+        this.setDebugAllowed(debug);
+        
+    }
+
+
     @Override
     public void fix()
     {
-        this.setName(this.getName()+"("+new Date().toGMTString()+")");
-        log("Pizzeria already exists, created pizzeria with a new Name "+this.getName());
+        Random rand=new Random(); 
+        config.setName(config.getName()+" "+rand.nextInt());
+        log("Pizzeria already exists, created pizzeria with a new Name "+config.getName());
         
     }
 

@@ -98,7 +98,7 @@ class OptionSet implements Serializable
         .append("Choices are: \n");
         for(Option choice:choices)
         {
-            builder.append(choice).append("\n");
+            builder.append(choice);
         }
         System.out.println(builder.toString());
     }
@@ -131,7 +131,7 @@ class OptionSet implements Serializable
         public String toString()
         {
             StringBuilder builder = new StringBuilder("Option name: ");
-            builder.append(name).append("price: ").append(price);
+            builder.append(name).append(" and the price: ").append(price);
             return builder.toString();
         }
         protected void print()

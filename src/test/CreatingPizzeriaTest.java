@@ -21,8 +21,16 @@ public class CreatingPizzeriaTest extends PizzaTester
     public void executeTest()
     {
         System.out.println("=========== Testing creating Pizzeria =============");
-        getCreateApi().createPizzeria("Diddy's Pizza", getConfig());
-        getCreateApi().printPizzeria("Diddy's Pizza");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        getCreateApi().configurePizzeria("pizzaconf.txt");
+        //getCreateApi().printPizzeria("Diddy's Pizza");
+//        getCreateApi().deletePizzeria("Diddy's Pizza");
+        System.out.println("=========== printing Pizzeria =============");
+        getCreateApi().printPizzerias();
         
     }
 

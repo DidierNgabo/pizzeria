@@ -1,4 +1,14 @@
+/**
+ * 
+ * On my honor, as a Carnegie-Mellon Africa student, I have neither given nor received unauthorized assistance on this work.
+ * 
+ * @author Didier Ngabo
+ * 
+ **/
+
 package scaletests;
+
+import java.util.concurrent.*;
 
 import wrapper.CreatePizzeria;
 import wrapper.PizzaConfigAPI;
@@ -9,27 +19,37 @@ public class ScaleTestDriver
     public static void main(String[] args)
     {
         
-        PizzaConfigAPI api= new PizzaConfigAPI();
+        PizzaConfigAPI api=new PizzaConfigAPI();
         
-        CreatePizzeria createApi = api;
+        CreatePizzeria createPizzeria = api;
+        UpdatePizzeria updatePizzeria = api;
         
-        UpdatePizzeria updateApi = api;
-        SimulatedUser user1=new UserOne(createApi);
+        SimulatedUser user1 = new ConfiguringUser(createPizzeria);
+        SimulatedUser user3 = new PrintingPizzeria(createPizzeria);
+        SimulatedUser user2 = new DeletingPizzeria(createPizzeria);
         
-        SimulatedUser user2=new UserOne(createApi);
-//        SimulatedUser user3=new UserTwo(updateApi);
-        SimulatedUser user4=new UserThree(createApi);
-        SimulatedUser user5=new UserOne(createApi);
-        SimulatedUser user6=new UserOne(createApi);
         
-         
-        new Thread(user1,"1").start();
-        new Thread(user2,"2").start();
+       /***
+        * 
+        * running test without threadpool
+        * 
+        ***/
+        Thread thread1 = new Thread(user1, "user1 without threadpool");
+        Thread thread2 = new Thread(user2, "user2 without threadpool");
+
+        thread1.start();
+        thread2.start();
+
         
-//        new Thread(user3,"3").start();
-        new Thread(user4,"4").start();
-        new Thread(user5,"5").start();
-        new Thread(user6,"6").start();
+        
+        /***
+         * 
+         * running test with threadpool
+         * 
+         ***/
+        ThreadPoolHandler.runThread(user1, user3, user2);
+        
+       
        
     }
 }

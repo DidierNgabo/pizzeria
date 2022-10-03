@@ -10,7 +10,7 @@ package wrapper;
 
 public interface UpdatePizzeria
 {
-    void updateBasePrice(String pizzeriaName,double newPrice);
+    String updateBasePrice(String pizzeriaName,double newPrice);
     void updateOptionSetName(String name,String optionSetName,String newName);
     void updateOptionPrice(String pizzeriaName,String optionName,String option,double newPrice);
 }

@@ -9,14 +9,18 @@
 package wrapper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import model.PizzaConfig;
 
 public interface CreatePizzeria
 {
-  public void printPizzeria(String name);
-  public void configurePizzeria(String name);
-  public void createOptionSet(String pizzeriaName,String name);
-  public void createOption(String pizzeriaName,String optionSetName,String option,double price);
-  public void printPizzerias();
+   void printPizzeria(String name);
+   void configurePizzeria(String name);
+   void createOptionSet(String pizzeriaName,String name);
+   String createOption(String pizzeriaName,String optionSetName,String option,double price);
+   void printPizzerias();
+   String deletePizzeria(String pizzeriaName);
+   List<String> getAllPizzeria();
+   PizzaConfig getPizzeria(String name);
 }

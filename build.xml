@@ -11,10 +11,13 @@
     <path id="pizzeria.classpath">
         <pathelement location="bin"/>
     </path>
-    <path id="run.TestDriver.classpath">
+    <path id="run.PizzeriaTestDriver.classpath">
         <path refid="pizzeria.classpath"/>
     </path>
-    <path id="run.PizzeriaTestDriver.classpath">
+    <path id="run.ScaleTestDriver.classpath">
+        <path refid="pizzeria.classpath"/>
+    </path>
+    <path id="run.TestDriver.classpath">
         <path refid="pizzeria.classpath"/>
     </path>
     <target name="init">
@@ -41,14 +44,19 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target name="TestDriver">
-        <java classname="test.TestDriver" failonerror="true" fork="yes">
-            <classpath refid="run.TestDriver.classpath"/>
-        </java>
-    </target>
     <target name="PizzeriaTestDriver">
         <java classname="test.PizzeriaTestDriver" failonerror="true" fork="yes">
             <classpath refid="run.PizzeriaTestDriver.classpath"/>
+        </java>
+    </target>
+    <target name="ScaleTestDriver">
+        <java classname="scaletests.ScaleTestDriver" failonerror="true" fork="yes">
+            <classpath refid="run.ScaleTestDriver.classpath"/>
+        </java>
+    </target>
+    <target name="TestDriver">
+        <java classname="test.TestDriver" failonerror="true" fork="yes">
+            <classpath refid="run.TestDriver.classpath"/>
         </java>
     </target>
 </project>

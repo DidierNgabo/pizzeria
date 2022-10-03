@@ -9,13 +9,17 @@
 package wrapper;
 
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Objects;
 
 import exceptions.CustomException;
 import exceptions.ExceptionFactory;
+import helpers.ExceptionMapper;
 import io.FileHandler;
 import model.PizzaConfig;
 
@@ -23,15 +27,14 @@ public abstract class ProxyPizzeria
 {
     private static LinkedHashMap<String,PizzaConfig> configs=new LinkedHashMap<String,PizzaConfig>();
     
-    
-    private void createPizzeria(String pizzeriaName,PizzaConfig pizzaConfig) 
+    private synchronized void createPizzeria(String pizzeriaName,PizzaConfig pizzaConfig) 
     {
         try 
         {
             if(pizzeriaName.isBlank())
             {
               
-                throw  ExceptionFactory.createException("nameMissing",pizzaConfig,true);
+                throw  ExceptionFactory.createException(ExceptionMapper.NAMEMISSING,pizzaConfig,true);
             }
             
             if(configs.size() == 0)
@@ -42,7 +45,7 @@ public abstract class ProxyPizzeria
             {
                 if(checkExists(pizzeriaName))
                 {
-                    throw  ExceptionFactory.createException("pizzeriaAlreadyExists",pizzaConfig,true);
+                    throw  ExceptionFactory.createException(ExceptionMapper.PIZZERIAEXISTS,pizzaConfig,true);
                 }
                 configs.put(pizzeriaName, pizzaConfig);
             } 
@@ -50,9 +53,8 @@ public abstract class ProxyPizzeria
         }
         catch(CustomException e)
         {
-            e.setName(pizzeriaName);
             e.fix();
-           configs.put(e.getName(), pizzaConfig);
+           configs.put(pizzaConfig.getName(), pizzaConfig);
         }
     }
     
@@ -68,10 +70,14 @@ public abstract class ProxyPizzeria
                
                if(idx != -1)
                {
-                   throw  ExceptionFactory.createException("OptionSetExists",config,true);
+                   throw  ExceptionFactory.createException(ExceptionMapper.OPTIONSETEXISTS,config,true);
                }
                
                config.addOptionSet(name);
+            }
+            else
+            {
+                throw  ExceptionFactory.createException(ExceptionMapper.NOTFOUND, pizzeriaName, true);
             }
         }
         catch(CustomException e)
@@ -83,7 +89,7 @@ public abstract class ProxyPizzeria
         
     }
     
-    public void createOption(String pizzeriaName,String optionSetName,String option,double price)
+    public String createOption(String pizzeriaName,String optionSetName,String option,double price)
     {
         PizzaConfig config= configs.get(pizzeriaName);
         try
@@ -96,10 +102,15 @@ public abstract class ProxyPizzeria
                
                if(idx != -1)
                {
-                   throw  ExceptionFactory.createException("OptionExists",config,true);
+                   throw  ExceptionFactory.createException(ExceptionMapper.OPTIONEXISTS,config,true);
                }
                
                config.addOption(optionSetName,option, price);
+               return "Option added successfully";
+            }
+            else
+            {
+                throw  ExceptionFactory.createException(ExceptionMapper.NOTFOUND, pizzeriaName, true);
             }
         }
         catch(CustomException e)
@@ -107,6 +118,7 @@ public abstract class ProxyPizzeria
             e.setName(option);
             e.fix();
             config.addOption(optionSetName, e.getName(), price);
+            return "Option added successfully";
         }
         
     }
@@ -127,7 +139,7 @@ public abstract class ProxyPizzeria
         return false;
     }
     
-    // check the pizzeria print well
+    // remove one of the following two methods
     public void printPizzeria(String name)
     {
         Iterator<Entry<String,PizzaConfig>> iterator = configs.entrySet().iterator();
@@ -144,16 +156,71 @@ public abstract class ProxyPizzeria
         }
     }
     
-    // leave this as it is 
-    public void configurePizzeria(String name)
+    public PizzaConfig getPizzeria(String name)
     {
-        PizzaConfig config = FileHandler.buildPizzaConfig(name);
-        if(config !=null)
-         createPizzeria(config.getName(), config);
+        Iterator<Entry<String,PizzaConfig>> iterator = configs.entrySet().iterator();
+        while(iterator.hasNext())
+        {
+            Entry<String,PizzaConfig> entry=iterator.next();
+            
+            if(name.equalsIgnoreCase(entry.getKey()))
+            {
+                System.out.println(entry.getKey());
+               return  entry.getValue();
+            }
+           
+        }
+        return null;
     }
     
-    //
-    public void updateBasePrice(String pizzeriaName,double newPrice)
+    public void configurePizzeria(String name)
+    {
+        FileHandler handler = new FileHandler();
+        PizzaConfig config = null;
+        try
+        {
+           
+            try 
+            {
+                if(name.contains(" "))
+                {
+                    throw ExceptionFactory.createException(ExceptionMapper.BADFILENAME, name, true);
+                }
+                config = handler.buildPizzaConfig(name);
+                if(config !=null)
+                {
+                    synchronized (config)
+                    {
+                        createPizzeria(config.getName(), config);
+                    }
+                }
+                    
+                   
+            }
+            catch(IOException e)
+            {
+                if(e.getClass().getName().contains("FileNotFoundException"))
+                  throw ExceptionFactory.createException(ExceptionMapper.FILENOTFOUND, name, true);
+            }
+        } 
+        catch (CustomException e)
+        {
+            e.fix();
+            try
+            {
+               config= handler.buildPizzaConfig(e.getName());
+               createPizzeria(name, config);
+            } catch (IOException ex)
+            {
+               System.out.println(ex.getMessage());
+            }
+        }
+        
+       
+    }
+    
+    // change this method to use status codes
+    public String updateBasePrice(String pizzeriaName,double newPrice)
     {
         PizzaConfig config= configs.get(pizzeriaName);
         try
@@ -161,7 +228,7 @@ public abstract class ProxyPizzeria
             
             if(newPrice == 0)
             {
-                throw  ExceptionFactory.createException("basePriceMissing",config,true);
+                throw  ExceptionFactory.createException(ExceptionMapper.PRICEMISSING,config,true);
             }
             
             Iterator<Entry<String,PizzaConfig>> iterator = configs.entrySet().iterator();
@@ -172,8 +239,10 @@ public abstract class ProxyPizzeria
                 if(pizzeriaName.equalsIgnoreCase(entry.getKey()))
                 {
                     entry.getValue().updateBasePrice(newPrice);
+                    return "Baseprice successfully updated";
                 }
             }
+            return null;
         } catch (CustomException e)
         {
            e.fix();
@@ -185,9 +254,11 @@ public abstract class ProxyPizzeria
                if(pizzeriaName.equalsIgnoreCase(entry.getKey()))
                {
                    entry.getValue().updateBasePrice(config.getBasePrice());
+                   return "Baseprice successfully updated";
                }
               
            }
+           return null;
            
         }
        
@@ -200,7 +271,7 @@ public abstract class ProxyPizzeria
         {
             if(newName.isBlank())
             {
-                throw ExceptionFactory.createException("nameMissing",config,true);
+                throw ExceptionFactory.createException(ExceptionMapper.NAMEMISSING,config,true);
             }
             Iterator<Entry<String,PizzaConfig>> iterator = configs.entrySet().iterator();
             while(iterator.hasNext())
@@ -246,7 +317,7 @@ public abstract class ProxyPizzeria
         {
             if(newPrice == 0)
             {
-                throw ExceptionFactory.createException("basePriceMissing",config,true);
+                throw ExceptionFactory.createException(ExceptionMapper.PRICEMISSING,config,true);
             }
             Iterator<Entry<String,PizzaConfig>> iterator = configs.entrySet().iterator();
             while(iterator.hasNext())
@@ -286,9 +357,14 @@ public abstract class ProxyPizzeria
         }
     }
     
-    public void deletePizzeria(String pizzeriaName)
+    public synchronized String deletePizzeria(String pizzeriaName)
     {
-        
+        if (checkExists(pizzeriaName))
+        {
+            configs.remove(pizzeriaName);
+            return "Pizzera deleted successfully";
+        }
+        return null;
     }
     
     public String toString()
@@ -297,16 +373,19 @@ public abstract class ProxyPizzeria
         return builder.append(configs.size()).append("configs").toString();
     }
     
-    public void printPizzerias()
+    public synchronized void printPizzerias()
     {
-       StringBuilder builder = new StringBuilder("The Pizzeria is ");
-       configs.forEach((key,value)->{
-           builder.append(key).append("\n");
-           builder.append(value);
-       });
-       System.out.println(builder.toString());
+      for(PizzaConfig config:configs.values())
+      {
+          config.print();
+      }
     }
     
-    
+    public List<String> getAllPizzeria()
+    {
+       List<String> pizzeriasName = new ArrayList(configs.keySet()); 
+       
+       return pizzeriasName;
+    }
 }
     

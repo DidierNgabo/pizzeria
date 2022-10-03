@@ -19,7 +19,7 @@ public class CreateNameMissingPizzeriaTest extends PizzaTester
     public void executeTest()
     {
         System.out.println("=========== Testing creating Pizzeria When the name is missing =============");
-        getCreateApi().createPizzeria("", getConfig());
+        getCreateApi().configurePizzeria("pizzaconf.txt");
         getCreateApi().printPizzeria("xxxxx");
         
     }

@@ -121,7 +121,7 @@ public class PizzaConfig implements Serializable
         }
     }
 //    crud methods for OptionSet
-    public boolean addOptionSet(String name)
+    public synchronized boolean addOptionSet(String name)
     {
         try 
         {
@@ -147,11 +147,11 @@ public class PizzaConfig implements Serializable
         return -1;
     }
     
-    public void deleteAllOptionSets()
+    public synchronized void deleteAllOptionSets()
     {
         optionSets.clear();
     }
-    public void deleteOneOptionSet(String name)
+    public synchronized void deleteOneOptionSet(String name)
     {
        
        int idx = findOptionSet(name);
@@ -171,7 +171,7 @@ public class PizzaConfig implements Serializable
         }
     }
 //    crud operations for choices in context of option set
-    public void addOption(String optionSetName,String name,double price)
+    public synchronized void addOption(String optionSetName,String name,double price)
     {
         int idx = findOptionSet(optionSetName);
         if(idx > -1)
@@ -216,7 +216,7 @@ public class PizzaConfig implements Serializable
         
     }
 //    print and toString methods
-    public void print()
+    public synchronized void print()
     {
         StringBuilder builder = new StringBuilder();
         builder.append("Pizza config \n")

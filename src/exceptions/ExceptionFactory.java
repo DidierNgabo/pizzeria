@@ -8,30 +8,33 @@
 
 package exceptions;
 
-import java.util.LinkedHashMap;
 
+import helpers.ExceptionMapper;
 import model.PizzaConfig;
 
-// change the name please
 public class ExceptionFactory
 {
    
     
-    public static CustomException createException(String type,PizzaConfig config,boolean debug)
+    public static CustomException createException(ExceptionMapper type,PizzaConfig config,boolean debug)
     {
         CustomException exception=null;
         
-        if(type.equalsIgnoreCase("basePriceMissing"))
+        if(type == ExceptionMapper.PRICEMISSING)
         {
             exception = new PriceMissingException(config,debug);
         }
-        else if(type.equalsIgnoreCase("nameMissing"))
+        else if(type == ExceptionMapper.NAMEMISSING)
         {
             exception = new NameMissingException(config,debug); 
         }
-        else if(type.equalsIgnoreCase("OptionSetExists"))
+        else if(type == ExceptionMapper.OPTIONSETEXISTS)
         {
             exception = new OptionSetExistException(config,debug); 
+        }
+        else if(type == ExceptionMapper.PIZZERIAEXISTS)
+        {
+            exception = new PizzeriaAlreadyExistsException(config,debug); 
         }
         else
         {
@@ -40,14 +43,24 @@ public class ExceptionFactory
         return exception;
     }
     
-    public static CustomException createException(String type,String name,boolean debug)
+    public static CustomException createException(ExceptionMapper type,String name,boolean debug)
     {
         CustomException exception=null;
-        
-         if(type.equalsIgnoreCase("pizzeriaAlreadyExists"))
+          
+         if(type == ExceptionMapper.BADFILENAME)
         {
-            exception = new PizzeriaAlreadyExistsException(name,debug); 
+             exception = new FileSpaceException(name,debug); 
         }
+         
+         if(type == ExceptionMapper.FILENOTFOUND)
+         {
+              exception = new FileException(name,debug); 
+         }
+         
+         if(type == ExceptionMapper.NOTFOUND)
+         {
+              exception = new NotFoundException(name,debug); 
+         }
        
         return exception;
     }

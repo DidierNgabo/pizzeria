@@ -1,18 +1,29 @@
+/**
+ * 
+ * On my honor, as a Carnegie-Mellon Africa student, I have neither given nor received unauthorized assistance on this work.
+ * 
+ * @author Didier Ngabo
+ * 
+ **/
+
 package io;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
+import exceptions.CustomException;
 import model.PizzaConfig;
 
 public class FileHandler
 {
     
     
-    public static PizzaConfig buildPizzaConfig(String filename)
+    public  PizzaConfig buildPizzaConfig(String filename) throws IOException
+    
     {
-        try
-        {
+       
             PizzaConfig config = new PizzaConfig();
             FileReader file = new FileReader(filename);
             BufferedReader buff = new BufferedReader(file);
@@ -47,13 +58,8 @@ public class FileHandler
             }
             buff.close();
             
-            config.print();
+            //config.print();
             return config;
-        } catch (Exception e)
-        {
-            System.out.println("Error " + e.toString());
-            return null;
-        }
       
     }
 }

@@ -1,27 +1,27 @@
-package exceptions;
+/**
+ * 
+ * On my honor, as a Carnegie-Mellon Africa student, I have neither given nor received unauthorized assistance on this work.
+ * 
+ * @author Didier Ngabo
+ * 
+ **/
 
-import java.io.File;
-import java.io.FileNotFoundException;
+package exceptions;
 
 public class FileException extends CustomException
 {
-
-    public FileException(String n)
+    public FileException(String n,boolean debug)
     {
         super(n);
+        this.setDebugAllowed(debug);
     }
     
     @Override
     public void fix()
     {
-            File file =new File(name);
-            String parentDir = file.getParentFile().getName();
-            boolean fileExists = new File(parentDir, name).exists();
-            if(!fileExists)
-                System.out.println("working");
-            
-              log("Pizzeria name created with a new Name "+this.getName());
-        
-    }
 
+        String[] filename = name.split("/");
+        this.setName(filename[1]);      
+        log("File found in the parent directory"); 
+    }
 }

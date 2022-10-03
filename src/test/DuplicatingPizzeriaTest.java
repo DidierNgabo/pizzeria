@@ -19,7 +19,7 @@ public class DuplicatingPizzeriaTest extends PizzaTester
     public void executeTest()
     {
         System.out.println("=========== Testing Duplicating Pizzeria =============");
-        getCreateApi().createPizzeria("Diddy's Pizza", getConfig());
+        getCreateApi().configurePizzeria("pizzaconf.txt");
         getCreateApi().printPizzeria("Diddy's Pizza");
     }
 }

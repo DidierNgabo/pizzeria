@@ -11,5 +11,5 @@ package wrapper;
 
 public interface DeletePizzeria
 {
-    void deletePizzeria(String pizzeriaName);
+   
 }

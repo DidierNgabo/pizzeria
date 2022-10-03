@@ -26,10 +26,6 @@ public class AddingChoiceTest extends PizzaTester
         setLabel("==================== Adding choices test ================");
         System.out.println(getLabel());
         PizzaConfig c = getConfig();
-        PizzaConfigAPI api= new PizzaConfigAPI();
-//      
-     CreatePizzeria cpr= api;
-     UpdatePizzeria upr=api;
         c.addOptionSet("Meat Choice");
         c.addOption("Meat Choice", "Pepperoni", 2800);
         c.addOption("Meat Choice", "Beef", 2000);
@@ -39,14 +35,6 @@ public class AddingChoiceTest extends PizzaTester
         c.addOption("Meat Choice", "Pepperoni", 2800);
         c.addOption("Meat Choice", "Pepperoni", 2800);
         c.addOption("Meat Choice", "Pepperoni", 2800);
-        cpr.createPizzeria("Diddy", c);
-        cpr.createPizzeria("Diddy", c);
-       
-        cpr.printPizzeria(c.getName());
-        upr.updateBasePrice(c.getName(), 5000);
-        
-        cpr.printPizzeria(c.getName());
-        
         serialize();
         deserialize();
     }

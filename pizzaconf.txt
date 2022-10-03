@@ -1,4 +1,4 @@
-$Pizza config,5000
+$Diddy's Pizza,2000
 *Meat Choice
 *Veg Choice
 #Meat Choice:Pepperoni, 4000
