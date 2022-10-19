@@ -16,6 +16,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Properties;
 
 import exceptions.CustomException;
 import exceptions.ExceptionFactory;
@@ -106,6 +107,7 @@ public abstract class ProxyPizzeria
                }
                
                config.addOption(optionSetName,option, price);
+               configs.put(pizzeriaName, config);
                return "Option added successfully";
             }
             else
@@ -118,6 +120,7 @@ public abstract class ProxyPizzeria
             e.setName(option);
             e.fix();
             config.addOption(optionSetName, e.getName(), price);
+            configs.put(pizzeriaName, config);
             return "Option added successfully";
         }
         
@@ -132,10 +135,8 @@ public abstract class ProxyPizzeria
             if(i.next().equals(name))
             {
                 return true;
-            }
-            
+            }  
         }
-        
         return false;
     }
     
@@ -171,6 +172,37 @@ public abstract class ProxyPizzeria
            
         }
         return null;
+    }
+    
+    public boolean parseProperties(Properties props)
+    {
+       PizzaConfig config = new PizzaConfig();
+      
+       String p = props.getProperty("Pizzeria");
+       if(!p.equals(null))
+       {
+           String price = props.getProperty("BasePrice");
+           String option1 = props.getProperty("Option1");
+           String option2 = props.getProperty("Option2");
+           String optionValue1a = props.getProperty("OptionValue1a");
+           String optionValue1b = props.getProperty("OptionValue1b");
+           String optionValue2a = props.getProperty("OptionValue2a");
+           String optionValue2b = props.getProperty("OptionValue2b");
+           
+           config.setName(p);
+           config.setBasePrice(Double.parseDouble(price));
+           config.addOptionSet(option1);
+           config.addOptionSet(option2);
+           config.addOption(option1, optionValue1a, 500);
+           config.addOption(option1, optionValue1b, 400);
+           config.addOption(option2, optionValue2a, 300);
+           config.addOption(option2, optionValue2b, 200);
+           
+           this.createPizzeria(p, config); 
+           return true;
+       }
+       
+       return false;
     }
     
     public void configurePizzeria(String name)
@@ -239,6 +271,7 @@ public abstract class ProxyPizzeria
                 if(pizzeriaName.equalsIgnoreCase(entry.getKey()))
                 {
                     entry.getValue().updateBasePrice(newPrice);
+                    configs.put(pizzeriaName, entry.getValue());
                     return "Baseprice successfully updated";
                 }
             }
@@ -254,6 +287,7 @@ public abstract class ProxyPizzeria
                if(pizzeriaName.equalsIgnoreCase(entry.getKey()))
                {
                    entry.getValue().updateBasePrice(config.getBasePrice());
+                   configs.put(pizzeriaName, entry.getValue());
                    return "Baseprice successfully updated";
                }
               

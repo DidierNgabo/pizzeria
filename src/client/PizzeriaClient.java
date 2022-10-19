@@ -1,3 +1,11 @@
+/**
+ * 
+ * On my honor, as a Carnegie-Mellon Africa student, I have neither given nor received unauthorized assistance on this work.
+ * 
+ * @author Didier Ngabo
+ * 
+ **/
+
 package client;
 
 import java.util.List;

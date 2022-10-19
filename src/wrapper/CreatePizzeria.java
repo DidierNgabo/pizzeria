@@ -10,6 +10,7 @@ package wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import model.PizzaConfig;
 
@@ -23,4 +24,5 @@ public interface CreatePizzeria
    String deletePizzeria(String pizzeriaName);
    List<String> getAllPizzeria();
    PizzaConfig getPizzeria(String name);
+   boolean parseProperties(Properties p);
 }

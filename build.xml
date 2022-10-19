@@ -11,6 +11,15 @@
     <path id="pizzeria.classpath">
         <pathelement location="bin"/>
     </path>
+    <path id="run.GUI.classpath">
+        <path refid="pizzeria.classpath"/>
+    </path>
+    <path id="run.Main.classpath">
+        <path refid="pizzeria.classpath"/>
+    </path>
+    <path id="run.MainServer.classpath">
+        <path refid="pizzeria.classpath"/>
+    </path>
     <path id="run.PizzeriaTestDriver.classpath">
         <path refid="pizzeria.classpath"/>
     </path>
@@ -20,12 +29,13 @@
     <path id="run.TestDriver.classpath">
         <path refid="pizzeria.classpath"/>
     </path>
+    <path id="run.UIDriver.classpath">
+        <path refid="pizzeria.classpath"/>
+    </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.ucls"/>
-                <exclude name="**/*.useq"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -44,6 +54,21 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="GUI">
+        <java classname="gui.GUI" failonerror="true" fork="yes">
+            <classpath refid="run.GUI.classpath"/>
+        </java>
+    </target>
+    <target name="Main">
+        <java classname="gui.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main.classpath"/>
+        </java>
+    </target>
+    <target name="MainServer">
+        <java classname="server.MainServer" failonerror="true" fork="yes">
+            <classpath refid="run.MainServer.classpath"/>
+        </java>
+    </target>
     <target name="PizzeriaTestDriver">
         <java classname="test.PizzeriaTestDriver" failonerror="true" fork="yes">
             <classpath refid="run.PizzeriaTestDriver.classpath"/>
@@ -57,6 +82,11 @@
     <target name="TestDriver">
         <java classname="test.TestDriver" failonerror="true" fork="yes">
             <classpath refid="run.TestDriver.classpath"/>
+        </java>
+    </target>
+    <target name="UIDriver">
+        <java classname="ui.UIDriver" failonerror="true" fork="yes">
+            <classpath refid="run.UIDriver.classpath"/>
         </java>
     </target>
 </project>
